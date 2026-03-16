@@ -1142,7 +1142,30 @@ a {
   flex-wrap: wrap;
 }
 
+@media (max-width: 1100px) {
+  .hero-grid {
+    gap: 32px;
+  }
+
+  .hero-title {
+    font-size: clamp(2.6rem, 6.5vw, 4.8rem);
+  }
+}
+
 @media (max-width: 980px) {
+  .nav {
+    flex-wrap: wrap;
+  }
+
+  .nav-links {
+    flex: 1 1 100%;
+    justify-content: flex-start;
+  }
+
+  .btn {
+    white-space: nowrap;
+  }
+
   .hero-grid,
   .split,
   .cta,
@@ -1173,10 +1196,60 @@ a {
   }
 }
 
+@media (max-width: 900px) {
+  .section {
+    padding: 64px 0;
+  }
+
+  .hero {
+    padding: 80px 0 56px;
+  }
+
+  .hero-copy {
+    font-size: 1.02rem;
+  }
+
+  .service-item {
+    gap: 6px;
+  }
+}
+
 @media (max-width: 760px) {
   .nav {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
+    gap: 16px;
+  }
+
+  .logo {
+    font-size: 1.05rem;
+  }
+
+  .logo img {
+    height: 42px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    overflow-x: visible;
+    gap: 12px;
+    font-size: 0.92rem;
+  }
+
+  .nav-links a {
+    padding-bottom: 2px;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .cta-row {
+    gap: 10px;
+  }
+
+  .cta-row .btn {
+    width: 100%;
   }
 
   .grid-3,
@@ -1204,7 +1277,17 @@ a {
   }
 
   .hero {
-    padding-top: 64px;
+    padding: 64px 0 48px;
+  }
+
+  .hero-title {
+    font-size: clamp(2.2rem, 9vw, 3.6rem);
+    line-height: 1;
+    letter-spacing: -0.02em;
+  }
+
+  .hero-copy {
+    font-size: 1rem;
   }
 
   .hero-panel {
@@ -1213,6 +1296,79 @@ a {
 
   .cta {
     padding: 32px;
+  }
+
+  .service-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .case strong {
+    font-size: 2.1rem;
+  }
+
+  .page-grid {
+    background-size: 160px 160px;
+    opacity: 0.35;
+  }
+
+  .back-to-top {
+    height: 40px;
+    width: 40px;
+    right: 18px;
+    bottom: 18px;
+  }
+}
+
+@media (max-width: 600px) {
+  .section {
+    padding: 56px 0;
+  }
+
+  .section-title::after {
+    width: 44px;
+  }
+
+  .card,
+  .case,
+  .testimonial,
+  .blog-card,
+  .blog-post,
+  .contact-card {
+    padding: 20px;
+  }
+
+  .hero-panel {
+    padding: 16px;
+  }
+
+  .cta {
+    padding: 24px;
+  }
+
+  .badge,
+  .tag {
+    font-size: 0.7rem;
+  }
+}
+
+@media (hover: none) {
+  .tile-group:hover .tile,
+  .tile-group .tile:hover {
+    transform: none;
+    opacity: 1;
+  }
+
+  .floaty {
+    animation: none;
+    transform: none;
+  }
+
+  .btn-primary:hover,
+  .btn-outline:hover,
+  .card:hover,
+  .blog-card:hover {
+    transform: none;
   }
 }
 
